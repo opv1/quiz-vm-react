@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/quiz-app/static/css/main.a78d127e.chunk.css",
-    "main.js": "/quiz-app/static/js/main.534c52d9.chunk.js",
-    "main.js.map": "/quiz-app/static/js/main.534c52d9.chunk.js.map",
-    "runtime-main.js": "/quiz-app/static/js/runtime-main.4f483d45.js",
-    "runtime-main.js.map": "/quiz-app/static/js/runtime-main.4f483d45.js.map",
-    "static/js/2.2df24f63.chunk.js": "/quiz-app/static/js/2.2df24f63.chunk.js",
-    "static/js/2.2df24f63.chunk.js.map": "/quiz-app/static/js/2.2df24f63.chunk.js.map",
-    "index.html": "/quiz-app/index.html",
-    "precache-manifest.c2aa6bb53c49ae5534d4aeb89f90d678.js": "/quiz-app/precache-manifest.c2aa6bb53c49ae5534d4aeb89f90d678.js",
-    "service-worker.js": "/quiz-app/service-worker.js",
-    "static/css/main.a78d127e.chunk.css.map": "/quiz-app/static/css/main.a78d127e.chunk.css.map",
-    "static/js/2.2df24f63.chunk.js.LICENSE.txt": "/quiz-app/static/js/2.2df24f63.chunk.js.LICENSE.txt"
+    "main.css": "/quiz-app-vm-react/static/css/main.f621c710.chunk.css",
+    "main.js": "/quiz-app-vm-react/static/js/main.2b1dcb6b.chunk.js",
+    "main.js.map": "/quiz-app-vm-react/static/js/main.2b1dcb6b.chunk.js.map",
+    "runtime-main.js": "/quiz-app-vm-react/static/js/runtime-main.25e73947.js",
+    "runtime-main.js.map": "/quiz-app-vm-react/static/js/runtime-main.25e73947.js.map",
+    "static/js/2.db441e93.chunk.js": "/quiz-app-vm-react/static/js/2.db441e93.chunk.js",
+    "static/js/2.db441e93.chunk.js.map": "/quiz-app-vm-react/static/js/2.db441e93.chunk.js.map",
+    "index.html": "/quiz-app-vm-react/index.html",
+    "precache-manifest.17cfe4c320fe33df47deb38734aefcdf.js": "/quiz-app-vm-react/precache-manifest.17cfe4c320fe33df47deb38734aefcdf.js",
+    "service-worker.js": "/quiz-app-vm-react/service-worker.js",
+    "static/css/main.f621c710.chunk.css.map": "/quiz-app-vm-react/static/css/main.f621c710.chunk.css.map",
+    "static/js/2.db441e93.chunk.js.LICENSE.txt": "/quiz-app-vm-react/static/js/2.db441e93.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f483d45.js",
-    "static/js/2.2df24f63.chunk.js",
-    "static/css/main.a78d127e.chunk.css",
-    "static/js/main.534c52d9.chunk.js"
+    "static/js/runtime-main.25e73947.js",
+    "static/js/2.db441e93.chunk.js",
+    "static/css/main.f621c710.chunk.css",
+    "static/js/main.2b1dcb6b.chunk.js"
   ]
 }
