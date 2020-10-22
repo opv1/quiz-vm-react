@@ -3,14 +3,14 @@
   left: 0;
   top: 0;
   bottom: 0;
+  z-index: 90;
+  padding: 20px 10px;
   width: 80%;
   max-width: 300px;
-  padding: 20px 10px;
   box-sizing: border-box;
   background: #fff;
-  transform: translateX(0px);
+  transform: translateX(0);
   transition: transform 0.22s ease-in;
-  z-index: 90;
 }
 
 .Drawer.close {
@@ -28,12 +28,12 @@
 }
 
 .Drawer ul li a {
-  color: #363d54;
+  position: relative;
+  padding: 0 20px 10px;
   font-size: 30px;
   text-decoration: none;
+  color: #363d54;
   background-color: #fff;
-  position: relative;
-  padding: 0 20px 10px 20px;
   transition: opacity 0.3s;
 }
 
