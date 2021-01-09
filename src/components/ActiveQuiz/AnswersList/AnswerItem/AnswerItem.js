@@ -1,11 +1,11 @@
-import React from 'react';
-import classes from './AnswerItem.module.scss';
+import React from 'react'
+import classes from './AnswerItem.module.scss'
 
 const AnswerItem = (props) => {
-  const cls = [classes.AnswerItem];
+  const cls = [classes.AnswerItem]
 
   if (props.state) {
-    cls.push(classes[props.state]);
+    cls.push(classes[props.state])
   }
 
   return (
@@ -15,7 +15,7 @@ const AnswerItem = (props) => {
     >
       {props.answer.text}
     </li>
-  );
-};
+  )
+}
 
-export default AnswerItem;
+export default AnswerItem

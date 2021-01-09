@@ -1,6 +1,6 @@
-import React from 'react';
-import classes from './ActiveQuiz.module.scss';
-import AnswersList from './AnswersList/AnswersList';
+import React from 'react'
+import classes from './ActiveQuiz.module.scss'
+import AnswersList from './AnswersList/AnswersList'
 
 const ActiveQuiz = (props) => {
   return (
@@ -20,7 +20,7 @@ const ActiveQuiz = (props) => {
         onAnswerClick={props.onAnswerClick}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ActiveQuiz;
+export default ActiveQuiz

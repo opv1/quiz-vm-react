@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
-import classes from './QuizCreator.module.scss';
-import Button from '../../components/UI/Button/Button';
-import Input from '../../components/UI/Input/Input';
-import Select from '../../components/UI/Select/Select';
-import {
-  createControl,
-  validate,
-  validateForm,
-} from '../../form/formFramework';
-import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import classes from './QuizCreator.module.scss'
+import Button from '../../components/UI/Button/Button'
+import Input from '../../components/UI/Input/Input'
+import Select from '../../components/UI/Select/Select'
+import { createControl, validate, validateForm } from '../../form/formFramework'
+import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
+import { connect } from 'react-redux'
 import {
   createQuizQuestion,
   finishCreateQuiz,
-} from '../../store/actions/create';
+} from '../../store/actions/create'
 
 function createOptionControl(number) {
   return createControl(
@@ -23,7 +19,7 @@ function createOptionControl(number) {
       id: number,
     },
     { required: true }
-  );
+  )
 }
 
 function createFormControls() {
@@ -39,7 +35,7 @@ function createFormControls() {
     option2: createOptionControl(2),
     option3: createOptionControl(3),
     option4: createOptionControl(4),
-  };
+  }
 }
 
 class QuizCreator extends Component {
@@ -47,14 +43,14 @@ class QuizCreator extends Component {
     isFormValid: false,
     rightAnswerId: 1,
     formControls: createFormControls(),
-  };
+  }
 
   sibmitHandler = (event) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   addQuestionHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     const {
       question,
@@ -62,7 +58,7 @@ class QuizCreator extends Component {
       option2,
       option3,
       option4,
-    } = this.state.formControls;
+    } = this.state.formControls
 
     const questionItem = {
       question: question.value,
@@ -74,47 +70,47 @@ class QuizCreator extends Component {
         { text: option3.value, id: option3.id },
         { text: option4.value, id: option4.id },
       ],
-    };
+    }
 
-    this.props.createQuizQuestion(questionItem);
+    this.props.createQuizQuestion(questionItem)
 
     this.setState({
       isFormValid: false,
       rightAnswerId: 1,
       formControls: createFormControls(),
-    });
-  };
+    })
+  }
 
   createQuizHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     this.setState({
       isFormValid: false,
       rightAnswerId: 1,
       formControls: createFormControls(),
-    });
-    this.props.finishCreateQuiz();
-  };
+    })
+    this.props.finishCreateQuiz()
+  }
 
   changeHandler = (value, controlName) => {
-    const formControls = { ...this.state.formControls };
-    const control = { ...formControls[controlName] };
+    const formControls = { ...this.state.formControls }
+    const control = { ...formControls[controlName] }
 
-    control.touched = true;
-    control.value = value;
-    control.valid = validate(control.value, control.validation);
+    control.touched = true
+    control.value = value
+    control.valid = validate(control.value, control.validation)
 
-    formControls[controlName] = control;
+    formControls[controlName] = control
 
     this.setState({
       formControls,
       isFormValid: validateForm(formControls),
-    });
-  };
+    })
+  }
 
   renderControls() {
     return Object.keys(this.state.formControls).map((controlName, index) => {
-      const control = this.state.formControls[controlName];
+      const control = this.state.formControls[controlName]
 
       return (
         <Auxiliary key={controlName + index}>
@@ -131,15 +127,15 @@ class QuizCreator extends Component {
           />
           {index === 0 ? <hr /> : null}
         </Auxiliary>
-      );
-    });
+      )
+    })
   }
 
   selectChangeHandler = (event) => {
     this.setState({
       rightAnswerId: +event.target.value,
-    });
-  };
+    })
+  }
 
   render() {
     const select = (
@@ -154,7 +150,7 @@ class QuizCreator extends Component {
           { text: 4, value: 4 },
         ]}
       />
-    );
+    )
 
     return (
       <div className={classes.QuizCreator}>
@@ -184,21 +180,21 @@ class QuizCreator extends Component {
           </form>
         </div>
       </div>
-    );
+    )
   }
 }
 
 function mapStateToProps(state) {
   return {
     quiz: state.create.quiz,
-  };
+  }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     createQuizQuestion: (item) => dispatch(createQuizQuestion(item)),
     finishCreateQuiz: () => dispatch(finishCreateQuiz()),
-  };
+  }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuizCreator);
+export default connect(mapStateToProps, mapDispatchToProps)(QuizCreator)

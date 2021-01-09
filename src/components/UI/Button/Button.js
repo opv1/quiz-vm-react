@@ -1,8 +1,8 @@
-import React from 'react';
-import classes from './Button.module.scss';
+import React from 'react'
+import classes from './Button.module.scss'
 
 const Button = (props) => {
-  const cls = [classes.Button, classes[props.type]];
+  const cls = [classes.Button, classes[props.type]]
 
   return (
     <button
@@ -12,7 +12,7 @@ const Button = (props) => {
     >
       {props.children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

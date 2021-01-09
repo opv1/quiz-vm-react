@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import classes from './Drawer.module.scss';
-import { NavLink } from 'react-router-dom';
-import Backdrop from '../../UI/Backdrop/Backdrop';
+import React, { Component } from 'react'
+import classes from './Drawer.module.scss'
+import { NavLink } from 'react-router-dom'
+import Backdrop from '../../UI/Backdrop/Backdrop'
 
 class Drawer extends Component {
   clickHandler = () => {
-    this.props.onClose();
-  };
+    this.props.onClose()
+  }
 
   renderLinks(links) {
     return links.map((link, index) => {
@@ -21,26 +21,26 @@ class Drawer extends Component {
             {link.label}
           </NavLink>
         </li>
-      );
-    });
+      )
+    })
   }
 
   render() {
-    const cls = [classes.Drawer];
+    const cls = [classes.Drawer]
 
     if (!this.props.isOpen) {
-      cls.push(classes.close);
+      cls.push(classes.close)
     }
 
-    const links = [{ to: '/', label: 'Список', exact: true }];
+    const links = [{ to: '/', label: 'Список', exact: true }]
 
-    console.log('AUth', this.props.isAuthenticated);
+    console.log('AUth', this.props.isAuthenticated)
 
     if (this.props.isAuthenticated) {
-      links.push({ to: '/quiz-creator', label: 'Создать тест', exact: false });
-      links.push({ to: '/logout', label: 'Выйти', exact: false });
+      links.push({ to: '/quiz-creator', label: 'Создать тест', exact: false })
+      links.push({ to: '/logout', label: 'Выйти', exact: false })
     } else {
-      links.push({ to: '/auth', label: 'Авторизация', exact: false });
+      links.push({ to: '/auth', label: 'Авторизация', exact: false })
     }
 
     return (
@@ -50,8 +50,8 @@ class Drawer extends Component {
         </nav>
         {this.props.isOpen ? <Backdrop onClick={this.props.onClose} /> : null}
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Drawer;
+export default Drawer
