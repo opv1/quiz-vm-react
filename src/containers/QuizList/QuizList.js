@@ -10,7 +10,7 @@ class QuizList extends Component {
     return this.props.quizes.map((quiz) => {
       return (
         <li key={quiz.id}>
-          <NavLink to={'/quiz/' + quiz.id}>{quiz.name}</NavLink>
+          <NavLink to={'/quizs/quiz/' + quiz.id}>{quiz.name}</NavLink>
         </li>
       )
     })

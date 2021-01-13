@@ -17,21 +17,21 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path='/auth' component={Auth} />
-        <Route path='/quiz/:id' component={Quiz} />
-        <Route path='/' exact component={QuizList} />
-        <Redirect to='/' />
+        <Route path='/quizs/auth' component={Auth} />
+        <Route path='/quizs/quiz/:id' component={Quiz} />
+        <Route path='/quizs/' exact component={QuizList} />
+        <Redirect to='/quizs/' />
       </Switch>
     )
 
     if (this.props.isAuthenticated) {
       routes = (
         <Switch>
-          <Route path='/quiz-creator' component={QuizCreator} />
-          <Route path='/quiz/:id' component={Quiz} />
-          <Route path='/logout' component={Logout} />
-          <Route path='/' exact component={QuizList} />
-          <Redirect to='/' />
+          <Route path='/quizs/quiz-creator' component={QuizCreator} />
+          <Route path='/quizs/quiz/:id' component={Quiz} />
+          <Route path='/quizs/logout' component={Logout} />
+          <Route path='/quizs/' exact component={QuizList} />
+          <Redirect to='/quizs/' />
         </Switch>
       )
     }

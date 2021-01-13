@@ -37,7 +37,7 @@ const FinishedQuiz = (props) => {
         <Button onClick={props.onRetry} type='primary'>
           Повторить
         </Button>
-        <Link to='/'>
+        <Link to='/quizs/'>
           <Button type='success'>Перейти в список тестов</Button>
         </Link>
       </div>
