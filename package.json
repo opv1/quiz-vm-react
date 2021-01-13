@@ -1,9 +1,8 @@
 {
-  "name": "quiz-vm",
+  "name": "quizs-vm",
   "version": "0.1.0",
-  "description": "Quiz",
   "private": true,
-  "homepage": "https://opv1.github.io/quiz-vm/",
+  "homepage": "https://opv1.github.io/quizs-vm/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
