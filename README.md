@@ -7,7 +7,7 @@
 
 Stack: React
 
-## [See the project](https://opv1.github.io/quizs-vm/)
+## [See the project](https://opv1.github.io/quizs/)
 
 ## Setup
 
